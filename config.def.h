@@ -71,7 +71,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_l, spawn,    	   {.v = slockcmd } },
 	{ MODKEY,             		XK_n, spawn,         	   {.v = chromecmd } },
 	{ MODKEY,             		XK_s, spawn,          	   {.v = ibcmd } },
-	{ MODKEY|ShiftMask,   		XK_z, spawn,          	   SCHMD("maim /home/sid/Pictures/$(date '+%s').png")},
+	{ MODKEY|ShiftMask,   		XK_z, spawn,          	   SHCMD("maim /home/sid/Pictures/$(date '+%s').png")},
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
