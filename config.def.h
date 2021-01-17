@@ -2,7 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int gappx     = 40;        /* gap pixel between windows */
+static const unsigned int gappx     = 20;        /* gap pixel between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -72,7 +72,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_l, spawn,    	   {.v = slockcmd } },
 	{ MODKEY,             		XK_n, spawn,         	   {.v = chromecmd } },
 	{ MODKEY,             		XK_s, spawn,          	   {.v = ibcmd } },
-	{ MODKEY|ShiftMask,   		XK_z, spawn,          	   SHCMD("maim /home/sid/Pictures/$(date '+%s').png")},
+	//{ MODKEY|ShiftMask,   		XK_z, spawn,          	   SHCMD("maim /home/sid/Pictures/$(date '+%s').png")},
+	{ MODKEY|ShiftMask,   		XK_z, spawn,          	   SHCMD("maim -s | xclip -selection clipboard -t image/png")},
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
